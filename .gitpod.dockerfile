@@ -1,11 +1,11 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="Swift Infrastructure <swift-infrastructure@swift.org>"
 LABEL Description="Docker Container for the Swift programming language"
 
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && apt-get -q update && \
     apt-get -q install -y \
     libatomic1 \
-    libcurl3 \
+    libcurl4 \
     libxml2 \
     libedit2 \
     libsqlite3-0 \
@@ -25,7 +25,7 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
 #       Key fingerprint = A62A E125 BBBF BB96 A6E0  42EC 925C C1CC ED3D 1561
 # uid                  Swift 5.x Release Signing Key <swift-infrastructure@swift.org
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-ARG SWIFT_PLATFORM=ubuntu16.04
+ARG SWIFT_PLATFORM=ubuntu18.04
 ARG SWIFT_BRANCH=swift-5.1.1-release
 ARG SWIFT_VERSION=swift-5.1.1-RELEASE
 ARG SWIFT_WEBROOT=https://swift.org/builds/

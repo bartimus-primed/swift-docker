@@ -1,2 +1,2 @@
 image:
-  file: https://github.com/apple/swift-docker/blob/233d29c7f2dab3b4dadcfd06e18ee1c04bdfbe9b/5.1/ubuntu/18.04/Dockerfile
+  file: .gitpod.dockerfile
