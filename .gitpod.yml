@@ -1,2 +1,5 @@
 image:
   file: .gitpod.dockerfile
+vscode:
+  extensions:
+    - vknabel.vscode-swift-development-environment@2.8.1:Y9Wh/nFOphmlcyX2i+u/oA==
