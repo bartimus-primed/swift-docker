@@ -12,8 +12,6 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     libsqlite3-0 \
     libc6-dev \
     binutils \
-    libgcc-5-dev \
-    libstdc++-5-dev \
     libpython2.7 \
     tzdata \
     git \
@@ -21,16 +19,6 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
     clang \
     && rm -r /var/lib/apt/lists/*
 
-
-ARG SWIFT_PLATFORM=ubuntu18.04
-ARG SWIFT_BRANCH=swift-5.1.1-release
-ARG SWIFT_VERSION=swift-5.1.1-RELEASE
-ARG SWIFT_WEBROOT=https://swift.org/builds/
-
-ENV SWIFT_PLATFORM=$SWIFT_PLATFORM \
-    SWIFT_BRANCH=$SWIFT_BRANCH \
-    SWIFT_VERSION=$SWIFT_VERSION \
-    SWIFT_WEBROOT=$SWIFT_WEBROOT
 
 RUN set -e; \
     SWIFT_BIN_URL="https://swift.org/builds/swift-5.1.1-release/ubuntu1804/swift-5.1.1-RELEASE/swift-5.1.1-RELEASE-ubuntu18.04.tar.gz" \
